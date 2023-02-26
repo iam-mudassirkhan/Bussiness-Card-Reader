@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        app:cardElevation="18dp"
+        app:cardCornerRadius="20dp"
+        android:layout_margin="15dp"
+        android:visibility="gone"
+        app:strokeWidth="2dp"
+        app:strokeColor="@color/CompanyOrangeColor"
+
+        >
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/bussiness_card_placeholder"
+            android:visibility="visible"
+            android:scaleType="fitCenter"
+            />
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/textViewsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/cardView">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ButtonsLayout"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="30dp">
+
+
+            <TextView
+                android:id="@+id/textData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Capture Card Image or Choose from gallery to get text here"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                android:autoLink="all"
+                android:textSize="20dp">
+
+            </TextView>
+
+
+
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/textViewsLayout"
+        android:visibility="visible"
+        android:layout_above="@id/ButtonsLayout">
+
+<!--        <TextView-->
+<!--            android:id="@+id/phoneTextData"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="phone number will show here"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:autoLink="all"-->
+<!--            android:visibility="gone"-->
+<!--            android:textSize="20dp">-->
+
+<!--        </TextView>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="52dp"
+                android:padding="10dp"
+                android:text="Phone:"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/showPhoneNumberTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-30dp"
+                android:hint="Phone Number"
+                android:padding="10dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            >
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Email:"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/emailAddressTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Email will show here"
+                android:padding="10dp"
+                android:layout_marginLeft="30dp"
+                android:textStyle="bold"
+               />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Address: "
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/showAddressTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Address will show here"
+                android:padding="10dp"
+                android:layout_marginLeft="1dp"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Web URL: "
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/showWebURLTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Web URL will show here"
+                android:layout_marginLeft="-3dp"
+                android:padding="10dp"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/selectImageButtonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        >
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/BtnCapture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_design"
+            android:padding="10dp"
+            android:clickable="true"
+            android:foreground="?selectableItemBackground"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:visibility="visible"
+            android:text="Select Card Image"
+            android:textAllCaps="false"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ButtonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+       android:gravity="bottom"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible"
+        >
+
+
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btn_Call"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:clickable="true"
+            android:layout_weight="1"
+            android:foreground="?selectableItemBackground"
+            android:src="@drawable/icon_call"
+            android:background="@color/white"
+            android:scaleType="fitCenter"
+            android:visibility="visible"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnMessage"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:clickable="true"
+            android:foreground="?selectableItemBackground"
+            android:src="@drawable/icon_chat"
+            android:background="@color/white"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"
+            android:visibility="visible"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnRetakeImage"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginBottom="10dp"
+            android:clickable="true"
+            android:foreground="?selectableItemBackground"
+            android:src="@drawable/icon_cameraa"
+            android:background="@color/white"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"
+            android:visibility="visible"
+            />
+
+<!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--            android:id="@+id/btnRetakeImage"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:clickable="true"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:foreground="?selectableItemBackground"-->
+<!--            android:src="@drawable/icon_take_image"-->
+<!--            app:tint="#ffff"-->
+<!--            app:backgroundTint="#BDBDBD"-->
+<!--            android:background="@color/CompanyOrangeColor"-->
+<!--            app:fabSize="normal"-->
+<!--            />-->
+
+
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/BtnCopy"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:scaleType="fitCenter"
+
+            android:background="@color/white"
+            android:clickable="true"
+            android:padding="1dp"
+            android:layout_weight="1"
+            android:foreground="?selectableItemBackground"
+            android:src="@drawable/icon_add_contact"
+            android:visibility="visible" />
+
+
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnShare"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:clickable="true"
+            android:foreground="?selectableItemBackground"
+            android:padding="2dp"
+
+            android:src="@drawable/icon_share"
+            android:background="@color/white"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"
+            android:visibility="visible"
+            />
+
+
+    </LinearLayout>
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/textLayoutBelowButtons"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_marginRight="10dp"-->
+<!--        android:gravity="center_horizontal"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:visibility="visible"-->
+<!--        android:layout_marginBottom="10dp"-->
+<!--        >-->
+<!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="30dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_marginLeft="55dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="Call"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="70dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_marginLeft="15dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="Message"/>&ndash;&gt;-->
+<!--        <TextView-->
+<!--            android:layout_width="70dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="22dp"-->
+<!--            android:text="CAPTURE"-->
+<!--            android:textStyle="bold"-->
+<!--            />-->
+<!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="100dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_marginLeft="10dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="Add Contact"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="42dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_marginLeft="-15dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="Share"/>&ndash;&gt;-->
+
+<!--    </LinearLayout>-->
+
+</RelativeLayout>
